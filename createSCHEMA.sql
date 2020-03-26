@@ -66,3 +66,7 @@ CREATE TABLE Moves_by_TM_or_HM
 CREATE TABLE Moves_by_Tutor
     (ID int references Pokemon.ID,
     MID int references Move_Descriptions.MID);
+CREATE TABLE Images
+	(ID int primary key references Pokemon.ID,
+    Front varchar(100),
+    Back varchar(100));

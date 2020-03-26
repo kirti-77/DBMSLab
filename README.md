@@ -15,7 +15,7 @@ A pokemon database similar to those used in [Bulbapedia](https://bulbapedia.bulb
 - Ability and Move Descriptions
 
 ## Team Members:
-- Bijin Nhuchhe Pradhan (1NT18CS193) @bijmuj
+- [Bijin Nhuchhe Pradhan](github.com/bijmuj) (1NT18CS193)
 - Abhinash Prasad Sah (1NT18CS189)
-- Kirti Chaudhary (1NT18CS197) @kirti-77
+- [Kirti Chaudhary](github.com/kirti-77) (1NT18CS197)
 - Prity Panjiyar (1NT18CS215)
