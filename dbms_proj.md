@@ -7,20 +7,18 @@
 - Pokemon
     - ID: int **(PK)**
     - Name: string
-    - ImageF: image (references Images.Front)
-    - ImageB: image (references Image.Back)
-    - Type1: string (references Types.Name)
-    - Type2: string (references Types.Name)
+    - Type1: string (references Types.Type)
+    - Type2: string (references Types.Type)
     - Ability1: string (references Abilities.Name)
     - Ability2: string (references ABilities.Name)
     - AbilityH: string (references Abilities.Names)
       
 - Types
-    - Name: char **(PK)**
+    - Type: char **(PK)**
     - Compatibility: int[18]
     
 - Images
-    - ID: int **(PK)**
+    - ID: int **(PK)**(references Pokemon.ID)
     - Front: image
     - Back: image
     
@@ -37,7 +35,7 @@
     - SPDEF: int
     - SPD: int
     
-- Base Stats
+- Base_Stats
     - ID: int **(PK)**(references Pokemon.ID)
     - HP: int
     - ATK: int
@@ -46,36 +44,36 @@
     - SPDEF: int
     - SPD: int
     
-- Move Descriptions
+- Move_Descriptions
     - MID: int **(PK)** 
     - Name: string
-    - Type: string (references Types.Name)
+    - Type: string (references Types.Type)
     - Power: int
     - Accuracy: int
     - Details: string
     
-- Moves by leveling
+- Moves_by_Leveling
     - ID: int **(PK)**(references Pokemon.ID)
-    - MID: int **(PK)**(references Moves.MID)
+    - MID: int **(PK)**(references Move_Descriptions.MID)
     - Level: int
     
-- Move by TM/HM
+- Move_by_TM_or_HM
     - ID: int **(PK)**(references Pokemon.ID)
-    - MID: int **(PK)**(references Moves.MID)
-    - TM/HM_no: string
+    - MID: int **(PK)**(references Move_Descriptions.MID)
+    - TM_or_HM: string
     
-- Moves by Tutor
+- Moves_by_Tutor
     - ID: int **(PK)**(references Pokemon.ID)
-    - MID: int **(PK)**(references Moves.MID)
+    - MID: int **(PK)**(references Move_Descriptions.MID)
 
 ## Relations:
 
 - *Pokemon* have *Types*
 - *Pokemon* have *Images*
 - *Pokemon* have *Abilities*
-- *Pokemon* grow acccording to *Base Stats*
+- *Pokemon* grow acccording to *Base_Stats*
 - *Pokemon* yield *EVs*
-- *Pokemon* learn *Moves by Leveling*
-- *Pokemon* learn *Moves by TM/HM*
-- *Pokemon* learn *Moves by Tutor*
-- *Moves by Leveling/TM/TM/Tutor* have *Move Descriptions*
+- *Pokemon* learn *Moves_by_Leveling*
+- *Pokemon* learn *Moves_by_TM/HM*
+- *Pokemon* learn *Moves_by_Tutor*
+- *Moves_by_Leveling/TM/TM/Tutor* have *Move Descriptions*
