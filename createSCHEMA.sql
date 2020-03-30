@@ -1,28 +1,30 @@
+
 CREATE DATABASE Pokedex;
 USE Pokedex;
 CREATE TABLE Abilities
     (Name char(15) primary key DEFAULT "?",
     Effect char(250));
+drop table types;
 CREATE TABLE Types (
     Type CHAR(10) PRIMARY KEY,
-    NOR INT DEFAULT 1,
-    FIR INT DEFAULT 1,
-    WAT INT DEFAULT 1,
-    ELE INT DEFAULT 1,
-    GRA INT DEFAULT 1,
-    ICE INT DEFAULT 1,
-    FIG INT DEFAULT 1,
-    POI INT DEFAULT 1,
-    GRO INT DEFAULT 1,
-    FLY INT DEFAULT 1,
-    PSY INT DEFAULT 1,
-    BUG INT DEFAULT 1,
-    ROC INT DEFAULT 1,
-    GHO INT DEFAULT 1,
-    DRA INT DEFAULT 1,
-    DAR INT DEFAULT 1,
-    STE INT DEFAULT 1,
-    FAI INT DEFAULT 1
+    NOR float(4, 2),
+    FIR float(4, 2),
+    WAT float(4, 2),
+    ELE float(4, 2),
+    GRA float(4, 2),
+    ICE float(4, 2),
+    FIG float(4, 2),
+    POI float(4, 2),
+    GRO float(4, 2),
+    FLY float(4, 2),
+    PSY float(4, 2),
+    BUG float(4, 2),
+    ROC float(4, 2),
+    GHO float(4, 2),
+    DRA float(4, 2),
+    DAR float(4, 2),
+    STE float(4, 2),
+    FAI float(4, 2)
 );
 CREATE TABLE Pokemon
     (ID int primary key DEFAULT 0,
@@ -68,5 +70,5 @@ CREATE TABLE Moves_by_Tutor
     MID int references Move_Descriptions.MID);
 CREATE TABLE Images
 	(ID int primary key references Pokemon.ID,
-    Front varchar(100),
-    Back varchar(100));
+    url varchar(200));
+    

@@ -7,13 +7,11 @@
 - Pokemon
     - ID: int **(PK)**
     - Name: string
-    - ImageF: string (references Images.Front)
-    - ImageB: string (references Images.Back)
     - Type1: string (references Types.Type)
     - Type2: string (references Types.Type)
     - Ability1: string (references Abilities.Name)
-    - Ability2: string (references ABilities.Name)
-    - AbilityH: string (references Abilities.Names)
+    - Ability2: string (references Abilities.Name)
+    - AbilityH: string (references Abilities.Name)
       
 - Types
     - Type: string **(PK)**
@@ -21,8 +19,7 @@
     
 - Images
     - ID: int **(PK)**(references Pokemon.ID)
-    - Front: string
-    - Back: string
+    - Front: string (url to image)
     
 - Abilities
     - Name: string **(PK)**
