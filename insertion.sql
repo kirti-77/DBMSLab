@@ -41,7 +41,7 @@ INSERT INTO Abilities values
     ("Hustle", "Trades accuracy for power."),
     ("Intimidate", "Lowers the foe's Attack.");
 
-INSERT INTO pokemon VALUES
+INSERT INTO Pokemon VALUES
     (1, "Bulbasaur", "Grass", "Poison", "Overgrow", "Chlorophyll", NULL),
 	(2, "Ivysaur", "Grass", "Poison", "Overgrow", "Chlorophyll", NULL),
     (3, "Venusaur", "Grass", "Poison", "Overgrow", "Chlorophyll", NULL),
@@ -113,7 +113,7 @@ INSERT INTO Images VALUES
     (15, "https://cdn.bulbagarden.net/upload/thumb/6/61/015Beedrill.png/375px-015Beedrill.png"),
     (16, "https://cdn.bulbagarden.net/upload/thumb/5/55/016Pidgey.png/375px-016Pidgey.png");
     
-INSERT INTO move_descriptions VALUES
+INSERT INTO Move_Descriptions VALUES
 	(1, "Tackle", "Normal", 35, 95, "No extra effect."),
     (2, "Growl", "Normal", 0, 100, "Lowers attack slightly."),
     (3, "Scratch", "Normal", 40, 100, "No extra effect."),
@@ -139,7 +139,7 @@ INSERT INTO move_descriptions VALUES
     (23, "Water Pledge", "Water", 80, 100, "Powers-up the other type pledge moves."),
 	(24, "Uproar", "Normal", 80, 100, "Does not allow sleep.");
     
-INSERT INTO moves_by_leveling VALUES
+INSERT INTO Moves_by_Leveling VALUES
 	(1, 1, 1),
     (1, 2, 1), 
     (4, 3, 1),
@@ -156,7 +156,7 @@ INSERT INTO moves_by_leveling VALUES
     (12, 10, 8),
     (13, 11, 8);
 
-INSERT INTO moves_by_tm_or_hm VALUES
+INSERT INTO Moves_by_Tm_or_Hm VALUES
 	(3, 20, "TM15"),
 	(6, 20, "TM15"),
     (9, 20, "TM15"),
@@ -174,7 +174,7 @@ INSERT INTO moves_by_tm_or_hm VALUES
     (3, 19, "TM26"),
     (1, 16, "HM01");
     
-INSERT INTO moves_by_tutor VALUES
+INSERT INTO Moves_by_Tutor VALUES
 	(1, 21), 
     (2, 21), 
     (3, 21),
